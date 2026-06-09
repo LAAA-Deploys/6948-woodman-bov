@@ -277,6 +277,40 @@
   .highlight-card .h-title { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 8px; }
   .highlight-card p { font-size: 13.5px; color: var(--text); }
 
+  /* INVENTORY */
+  .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); gap: 16px; }
+  .inv-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+    padding: 18px 20px; display: flex; flex-direction: column;
+    transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+  }
+  .inv-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: var(--gold-light); }
+  .inv-card .inv-addr { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 16px; font-weight: 600; line-height: 1.25; }
+  .inv-card .inv-city { color: var(--muted); font-size: 12.5px; font-weight: 400; margin-top: 3px; }
+  .inv-card .inv-meta { margin-top: 12px; padding-top: 11px; border-top: 1px solid var(--border); }
+  .inv-card .inv-units { font-size: 12.5px; color: var(--muted); }
+  .inv-card .inv-price { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 18px; font-weight: 600; margin-top: 3px; }
+  .inv-card .inv-link {
+    margin-top: 13px; align-self: flex-start; color: var(--navy); text-decoration: none;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+    border-bottom: 1px solid var(--gold); padding-bottom: 1px; transition: color 0.15s;
+  }
+  .inv-card .inv-link:hover { color: var(--gold); }
+  .inv-card.subject { border: 2px solid var(--gold); background: #FBF6E9; }
+  .inv-card .inv-badge { display: inline-block; align-self: flex-start; background: var(--gold); color: var(--navy-dark); font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; margin-bottom: 9px; }
+  .inv-cta {
+    margin-top: 26px; background: var(--navy); border-radius: 10px; padding: 26px 30px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .inv-cta .ct-txt { color: var(--white); font-size: 15px; max-width: 620px; }
+  .inv-cta .ct-txt strong { color: var(--gold-light); }
+  .inv-cta a.ct-btn {
+    background: var(--gold); color: var(--navy-dark); text-decoration: none;
+    font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 13px 24px; border-radius: 8px; white-space: nowrap; transition: background 0.15s, transform 0.15s;
+  }
+  .inv-cta a.ct-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+
   /* FOOTER */
   footer.team-footer { background: var(--navy); color: var(--white); padding: 64px 24px 34px; }
   footer.team-footer .footer-wrap { max-width: 1280px; margin: 0 auto; }
@@ -345,6 +379,7 @@
       <a href="#valuation">Valuation</a>
       <a href="#challenges">Diligence</a>
       <a href="#why">Why It Trades</a>
+      <a href="#inventory">Listings</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -808,10 +843,134 @@
   </div>
 </section>
 
+<!-- CURRENT DEVELOPMENT LISTINGS -->
+<section id="inventory">
+  <div class="section-wrap">
+    <div class="section-label">Section 09 &mdash; LAAA Development Inventory</div>
+    <h2 class="section-title">Our Current Development Listings</h2>
+    <div class="section-divider"></div>
+    <div class="section-subtitle">6948 Woodman is one of a deep active book of for-sale development and ground-up land listings the LAAA Team is marketing across Los Angeles, Ventura and Santa Barbara counties &mdash; from single-lot small-lot plays to 300-unit density-bonus sites. A snapshot of the current inventory is below; each links to its full offering. The complete, continuously-updated list lives at <a href="https://laaa.com/listings" target="_blank" rel="noopener" style="color:var(--navy);border-bottom:1px solid var(--gold);text-decoration:none;">laaa.com/listings</a>.</div>
+
+    <div class="inv-grid">
+      <div class="inv-card subject">
+        <span class="inv-badge">This Offering</span>
+        <div class="inv-addr">6948 Woodman Ave<div class="inv-city">Van Nuys</div></div>
+        <div class="inv-meta">
+          <div class="inv-units">Development &middot; ~24&ndash;110 buildable units &middot; 4 pathways</div>
+          <div class="inv-price">$1,800,000 &ndash; $2,000,000</div>
+        </div>
+        <a class="inv-link" href="https://6948-woodman.laaa.com" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">5151 E Arrow Hwy<div class="inv-city">Montclair</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 300 buildable units</div><div class="inv-price">$10,500,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/5151-e-arrow" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">3219-3249 Overland Ave<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 100 buildable units</div><div class="inv-price">$11,995,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/3219-3249-overland" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">1120-1164 W Sunset Blvd<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 237 buildable units</div><div class="inv-price">$9,000,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/1164-w-sunset" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">5511 Ethel Ave<div class="inv-city">Sherman Oaks</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 199 buildable units</div><div class="inv-price">$9,000,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/5511-ethel" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">2600 S Robertson Blvd<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 150 buildable units</div><div class="inv-price">$7,995,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/2600-s-robertson" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">4623-4631 Beverly Blvd<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 121 buildable units</div><div class="inv-price">$5,250,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/4623-4631-beverly" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">12335 Osborne Pl<div class="inv-city">Pacoima</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 293 buildable units</div><div class="inv-price">$4,250,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/12335-osborne" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">601 Pearl Street<div class="inv-city">Ojai</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 9 shovel-ready homes</div><div class="inv-price">$3,700,000</div></div>
+        <a class="inv-link" href="https://601pearl.laaa.com" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">2338-2354 Lake Shore Ave<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 4 buildable units</div><div class="inv-price">$2,800,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/2338-lake-shore" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">10898 Olinda St<div class="inv-city">Sun Valley</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 78 buildable units</div><div class="inv-price">$2,500,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/10898-olinda" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">10425 Independence Ave<div class="inv-city">Chatsworth</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 8 buildable units</div><div class="inv-price">$2,500,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/10425-independence" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">5321 Riverton Ave<div class="inv-city">North Hollywood</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 27 buildable units</div><div class="inv-price">$2,000,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/5321-riverton" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">6540 Shoup Ave<div class="inv-city">West Hills</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 10 homes + 5 ADUs (SB 1123)</div><div class="inv-price">$2,000,000</div></div>
+        <a class="inv-link" href="https://6540-shoup-om.laaa.com" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">3837 College Ave<div class="inv-city">Culver City</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 21 buildable units</div><div class="inv-price">$2,000,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/3837-college" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">2126-2136 Branden St<div class="inv-city">Echo Park</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 39-unit RTI density bonus</div><div class="inv-price">$3,000,000</div></div>
+        <a class="inv-link" href="https://2126branden-om.laaa.com" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">631-637 W 6th St<div class="inv-city">San Pedro</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 39 buildable units</div><div class="inv-price">$1,800,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/631-637-w-6th" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">1431 N Vista St<div class="inv-city">Los Angeles</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 18 buildable units</div><div class="inv-price">$1,700,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/1431-n-vista" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">646 W 6th St<div class="inv-city">San Pedro</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 27 buildable units</div><div class="inv-price">$1,600,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/646-w-6th" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+      <div class="inv-card">
+        <div class="inv-addr">302 N Pacific Ave<div class="inv-city">San Pedro</div></div>
+        <div class="inv-meta"><div class="inv-units">Development &middot; 26 buildable units</div><div class="inv-price">$1,500,000</div></div>
+        <a class="inv-link" href="https://laaa.com/om/302-n-pacific" target="_blank" rel="noopener">View &rarr;</a>
+      </div>
+    </div>
+
+    <div class="inv-cta">
+      <div class="ct-txt">See the full active book &mdash; <strong>for-sale development, land, and multifamily</strong> &mdash; with live pricing and offering memoranda at laaa.com.</div>
+      <a class="ct-btn" href="https://laaa.com/listings" target="_blank" rel="noopener">Browse All Listings &rarr;</a>
+    </div>
+
+    <p class="src-note" style="margin-top:16px;">Source: laaa.com/listings, current as of June 2026. Unit counts are buildable/entitlement-level estimates per each listing&rsquo;s marketing materials; pricing is subject to change. Some offerings shown may be in escrow or recently traded &mdash; confirm current availability at laaa.com or with any advisor below.</p>
+  </div>
+</section>
+
 <!-- CONTACT / FOOTER -->
 <footer class="team-footer" id="contact">
   <div class="footer-wrap">
-    <div class="section-label" style="color: var(--gold);">Section 09 &mdash; Contact</div>
+    <div class="section-label" style="color: var(--gold);">Section 10 &mdash; Contact</div>
     <h2 class="section-title" style="color: var(--white);">Steven Schechter &amp; the LAAA Team</h2>
     <div class="section-divider"></div>
     <p style="opacity:0.85;max-width:760px;margin-bottom:30px;font-size:15px;">A multifamily and development advisory practice at Marcus &amp; Millichap &mdash; 458+ closed transactions and over $1.46 billion in volume across Los Angeles County. Contact any advisor to discuss 6948 Woodman Avenue.</p>
